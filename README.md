@@ -53,7 +53,7 @@ mkdir /projappl/project_xxxx/www_puhti_modules && cp CytoHackathon-resources.yml
 1. Login to [Puhti web interface](https://www.puhti.csc.fi/public/login.html)
 2. Login with CSC or course credentials (Users should have accepted Puhti service in [myCSC](https://my.csc.fi/welcome) page under a course ( or own) project before using this service). Login page is as shown below:
 
-<img src="./Puhti_login.png" width="80%">
+<img src="./puhti_web.png" width="80%">
 
 3. Once login is successfull, select "Interactive Sessions" on the top menu bar and then click "Jupyter for courses". On the right hand side you can see the different fields for selection before launching a job.  For this course, select the "Project" and "Working directory corresponding"  to course project. Then you will be able to see "CytoHackathon" module under the "Course module" field. You can then launch Jupyter notebook whick will be launched in the interaction partition by default. You can also change the default settings by checking "Show custom resource settings".
 
