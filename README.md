@@ -1,4 +1,4 @@
-#  Puhti computing environemnt for cytodata hackathon 2023 (WIP)
+#  Cytodata hackathon 2023 (WIP)
 
   Compute environemnt provided at CSC supercomputer will be used for this hackathon.  
   
@@ -7,7 +7,7 @@
   - custom installations and modules
   - Puhti web interface
 
-# Preparing custom notebooks for cytodata hackathon 2023
+## Preparing custom notebooks for cytodata hackathon 2023
 
 A custom Jupyter notebook for cytodata hackathon 2023 can be provisioned through [Puhti web interface](https://www.puhti.csc.fi). The customisation of notebook involves the following steps:
 
