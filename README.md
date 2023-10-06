@@ -25,7 +25,18 @@ Tykky wraps installations inside singularity container for improved performance 
 For the installation of computational environment required for cytodata hackathon 2023, we use the tykky in the following way (make sure to edit with correct CSC project name as needed):
 
 ```bash
--
+# start interactive session once you are in login node
+sinteractive -c 8 -m 50000 -d 100
+# load needed packages
+module load git
+module load purge
+module load tykky
+# install python libraries using tykky wrapper tool
+mkdir /projappl/<project>/$USER
+mkdir /projappl/<project>/$USER/CytoHackathon
+conda-containerize new --prefix  /projappl/<project>/$USER/CytoHackathon Cytohackathon_py310.yml     # install basic packages
+export PATH="/projappl/<project>/$USER/CytoHackathon/bin:$PATH"
+conda-containerize update /projappl/<project>/$USER/CytoHackathon/  --post-install requirements_Cytohackathon.sh   # update package list 
 
 ```
 Tykky would install all needed packages (as listed in the file, yaml) to the directory '/projappl/project_xxxx/CytoHackathon'
@@ -49,7 +60,7 @@ mkdir /projappl/project_xxxx/www_puhti_modules && cp CytoHackathon-resources.yml
 
 ```
 
-## Installing Ccustom Rstudio packages
+## Installing Custom Rstudio packages
 
 The RStudio application installed on Puhti comes with large set of pre-installed R packages and available *r-env* versions can be found on [CSC doccumentation pages](https://docs.csc.fi/apps/r-env/).  Please refer to CSC documentation on how to use R in batch and interatcive job applications. Installation of custom R packages can be found [here](#https://docs.csc.fi/apps/r-env/#r-package-installations)
 
