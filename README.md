@@ -15,6 +15,7 @@ A custom Jupyter notebook for cytodata hackathon 2023 can be provisioned through
 - [Installing necessary python packages to *projappl* directory using *tykky* wrapper tool](#installing-necessary-python-packages-to-projappl-directory-using-tykky)
 - [Creating a course environment/module(s)](#creating-a-course-environment-modules)
 - [Accessing notebook *via* Puhti web interface](#accessing-notebook-via-puhti-web-interface)
+- [Installing custom Rstudio packages](#installing-custom-rstudio-packages)
 - [Useful CSC documentation](useful-CSC-documentation)
 
 ### Installing necessary python packages to *projappl* directory using *tykky*:
@@ -48,6 +49,35 @@ mkdir /projappl/project_xxxx/www_puhti_modules && cp CytoHackathon-resources.yml
 
 ```
 
+## Installing Ccustom Rstudio packages
+
+The RStudio application installed on Puhti comes with large set of pre-installed R packages and available *r-env* versions can be found on [CSC doccumentation pages](https://docs.csc.fi/apps/r-env/).  Please refer to CSC documentation on how to use R in batch and interatcive job applications. Installation of custom R packages can be found [here](#https://docs.csc.fi/apps/r-env/#r-package-installations)
+
+Briefly: R/Rstuido is installed as containers and users can only install the missing R packages in a dedicated writable disk spaces (
+e.g., /projappl). When installing R packages, point R to the writable disk space. 
+
+Here is an example on how to  install a R package:
+```
+sinteractive -c 4     # start interactive node with four cores, you can also specify memory (-m 50000) and disk space  (-d 100)
+module load r-nev/430   # you can for example load R v430 version
+# Add this to your R code:
+.libPaths(c("/projappl/<project>/project_rpackages_<rversion>", .libPaths()))
+libpath <- .libPaths()[1]
+
+# This command can be used to check that the folder is now visible:
+.libPaths() # It should be first on the list
+
+# Package installations should now be directed to the project
+install.packages("package", lib = libpath)
+BiocManager::install("mistyR") # this will install "mistyR" package using a R package manager
+install.packages("https://cran.rstudio.com/src/contrib/scattermore_1.2.tar.gz", repos=NULL, type="source") # install a pckage from source
+remotes::install_github("satijalab/seurat", "seurat5", quiet = TRUE)  # install package from a Github
+```
+Please note that you have to run the following command every time you launch R session if you want to use your custom installations.
+
+```
+.libPaths(c("/projappl/<project>/project_rpackages_<rversion>", .libPaths()))
+```
 
 ### Accessing notebook via Puhti web interface
 
