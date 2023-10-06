@@ -32,8 +32,7 @@ module load git
 module load purge
 module load tykky
 # install python libraries using tykky wrapper tool
-mkdir /projappl/<project>/$USER
-mkdir /projappl/<project>/$USER/CytoHackathon
+mkdir -p /projappl/<project>/$USER && mkdir -p /projappl/<project>/$USER/CytoHackathon
 conda-containerize new --prefix  /projappl/<project>/$USER/CytoHackathon Cytohackathon_py310.yml     # install basic packages
 export PATH="/projappl/<project>/$USER/CytoHackathon/bin:$PATH"
 conda-containerize update /projappl/<project>/$USER/CytoHackathon/  --post-install requirements_Cytohackathon.sh   # update package list 
