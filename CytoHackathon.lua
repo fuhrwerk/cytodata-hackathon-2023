@@ -1,5 +1,5 @@
 -- Jupyter
-prepend_path("PATH", "/projappl/project_2001659/yetukuri/CytoHackathon/bin")
+prepend_path("PATH", "/projappl/project_xxxx/$USER/CytoHackathon/bin")
 depends_on("gcc/9.4.0","cudnn/8.1.0.77-11.2","cuda/11.2.2")
 prepend_path('PATH',"/appl/bin:/appl/spack/v018/install-tree/gcc-9.4.0/cuda-10.1.243-c7m3zk/bin")
 
