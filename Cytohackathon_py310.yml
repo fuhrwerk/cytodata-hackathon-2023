@@ -1,0 +1,9 @@
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - openjdk=8.0.152
+  - openslide
+  - pyvips
+  - jupyterlab=3.5.2
+  - pip
