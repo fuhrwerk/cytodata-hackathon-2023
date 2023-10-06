@@ -58,7 +58,7 @@ e.g., /projappl). When installing R packages, point R to the writable disk space
 
 Here is an example on how to  install a R package:
 ```
-sinteractive -c 4     # start interactive node with four cores, you can also specify memory (-m 50000) and disk space  (-d 100)
+sinteractive -c 4     # Once login to Puhti, start interactive node with four cores, you can also specify memory (-m 50000) and disk space  (-d 100)
 module load r-nev/430   # you can for example load R v430 version
 # Add this to your R code:
 .libPaths(c("/projappl/<project>/project_rpackages_<rversion>", .libPaths()))
