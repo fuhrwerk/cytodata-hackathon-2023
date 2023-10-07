@@ -28,7 +28,7 @@ Here is an example of tykky-based custom installation for cytodata hackathon 202
 
 ```bash
 # start interactive session once you are in login node
-sinteractive -c 8 -m 50000 -d 100
+sinteractive -c 8 -m 30000 -d 100  # this command will give you a compute node with 8 cores, 30 GB memory and 100 GB local disk space
 # load needed packages
 module load git   # git command is not available by default on interactive nodes
 module load purge  # clean environment 
