@@ -1,6 +1,6 @@
 #  Cytodata hackathon 2023 (WIP)
 
-  Compute environemnt provided at CSC supercomputer will be used for this hackathon.  
+  Compute environemnt provided at CSC supercomputer will be used for this hackathon.  One should have a [user account at CSC](https://docs.csc.fi/accounts/how-to-create-new-user-account/) and be a member of a project which [has access to the Puhti service](https://docs.csc.fi/accounts/how-to-add-service-access-for-project/). 
   
 # A brief primer on using Puhti computing environment
   - *Module system*: CSC uses module system to manage application stack in supercomouting environment. Applications installed as modules can be easily accessed for ready use in both interactive and batch jobs. Detailed instructions about using modularised applications can be found in [CSC documentation pages](https://docs.csc.fi/computing/modules/)
