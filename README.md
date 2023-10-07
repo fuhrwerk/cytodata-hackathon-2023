@@ -13,16 +13,16 @@ CSC hosts [Cytodata 2023 hackation](https://www.helsinki.fi/en/conferences/cytod
   - **Module system**: CSC uses module system to manage complex application stack in supercomputing environment. Applications installed as modules can easily be used in both interactive and batch jobs. The detailed instructions on using modularised applications can be found in [CSC documentation pages](https://docs.csc.fi/computing/modules/) as well as a [CSC course page](https://csc-training.github.io/csc-env-eff/hands-on/modules/modules-puhti.html)
   - **Disk areas**: CSC supercomputers have three main disk areas namely *home*, *projappl* and *scratch* which are visible to all compute and login nodes.  Each disk area has its own dedicated use and comes with quota limits on the size of disk pace and the number of files. Default quotas and their specific use can be found in [CSC user documentation](https://docs.csc.fi/computing/disk/)
   - **Custom installations**: You can install own software on CSC supercomputers if you cannot find it from the list of [pre-installed applications](https://docs.csc.fi/apps/) or using *module spider* command on Puhti terminal. Typically, one can download the source code of the software, compiles the code, and installs to a location where the user has write-access, e.g. the project's /projappl directory. More about installations can be found on [CSC documentation page](https://docs.csc.fi/computing/compiling-puhti/) and a [CSC course pages](https://csc-training.github.io/csc-env-eff/hands-on/installing/installing_hands-on_python.html). Puhti also supports [containerised installations](https://csc-training.github.io/csc-env-eff/hands-on/singularity/singularity-tutorial_part1.html)
-  - **Puhti web interface**: One can use web interface for [Puhti](www.puhti.csc.fi) to access the supercomputer via a web browser. More information can be found on web interface on [CSC documentation page](https://docs.csc.fi/computing/webinterface/)
+  - **Puhti web interface**: You can use web interface for [Puhti](www.puhti.csc.fi) to access Puhti supercomputer. The web interface greatly ease the use of complex applications that have graphical user interfaces among other uses. Read more information about the web interface on [CSC documentation page](https://docs.csc.fi/computing/webinterface/)
 
 ## Preparing a Custom Jupyter Notebook for Hackathon
 
-In addition to command-line usage of Puhti, a custom Jupyter notebook for cytodata hackathon 2023 can be prepared and can be accessed through [Puhti web interface](https://www.puhti.csc.fi). Please note that CSC provsions [popular python environements as ready-to-use notebooks](https://docs.csc.fi/computing/webinterface/jupyter/). You can however customise a python environement on your own. The customisation of notebook involves the following steps:
+In addition to command-line usage of Puhti, a custom Jupyter notebook for cytodata 2023 hackathon can be prepared and accessed through [Puhti web interface](https://www.puhti.csc.fi). Please note that CSC provisions [popular python environements as ready-to-use notebooks](https://docs.csc.fi/computing/webinterface/jupyter/). You can however customise a python environement to meet your own needs. The customisation of notebook typically involves the following steps:
 
 
 ### Installing Necessary Python Packages to *Projappl* Directory Using *tykky*
 
-One should not use conda installations directly on Puhti. [Tykky wrapper tool](https://docs.csc.fi/computing/containers/tykky/) which installs application inside of singularity container for better performance including faster startup times, reduced IO load, and  fewer number of files on large parallel filesystems. 
+Conda installations should not be done directly on Puhti. [Tykky wrapper tool](https://docs.csc.fi/computing/containers/tykky/) instead be used to install python packages. The wrapper tool installs applications inside of a singularity container and thus  facilitates better performance in terms of faster startup times, reduced IO load, and rediuced number of files on parallel filesystems. 
 
 Here is an example of tykky-based custom installation for cytodata hackathon 2023 (make sure to edit with correct CSC project name and user name as needed):
 
@@ -40,7 +40,7 @@ export PATH="/projappl/<project>/$USER/CytoHackathon/bin:$PATH"
 conda-containerize update /projappl/<project>/$USER/CytoHackathon/  --post-install requirements_Cytohackathon.sh   # update package list 
 
 ```
-Tykky would install a basic setup (as listed in the file, yaml) first and the installs all python packages (as listed in requirements_Cytohackathon.sh) to the directory '/projappl/project_xxxx/CytoHackathon'. One has to add the bin directory of installation to the $PATH variable before start using the installed environemnt (i.e., export PATH="/projappl/<project>/$USER/CytoHackathon/bin:$PATH").
+Tykky would install a basic setup (as listed in the file, yaml) first and the installs all python packages (as listed in requirements_Cytohackathon.sh) to the directory '/projappl/project_xxxx/CytoHackathon'. you have to add the bin directory of installation to the $PATH variable before start using the installed environemnt (i.e., export PATH="/projappl/<project>/$USER/CytoHackathon/bin:$PATH").
 
 Once a python environment is set up, you can give the path of the environment as a custom path or set up as a Course environment module to access a notebook with the needed compute environement.
 
