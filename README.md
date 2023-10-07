@@ -40,9 +40,9 @@ export PATH="/projappl/<project>/$USER/CytoHackathon/bin:$PATH"
 conda-containerize update /projappl/<project>/$USER/CytoHackathon/  --post-install requirements_Cytohackathon.sh   # update package list 
 
 ```
-Tykky would install all needed packages (as listed in the file, yaml) to the directory '/projappl/project_xxxx/CytoHackathon'
+Tykky would install a basic setup (as listed in the file, yaml) first and the installs all python packages (as listed in requirements_Cytohackathon.sh) to the directory '/projappl/project_xxxx/CytoHackathon'. One has to add the bin directory of installation to the $PATH variable before start using the installed environemnt (i.e., export PATH="/projappl/<project>/$USER/CytoHackathon/bin:$PATH").
 
-Once a python environment is set up, you can give the path of the environment as a custom path or set up a module to access notebook with the needed compute environemnt.
+Once a python environment is set up, you can give the path of the environment as a custom path or set up as a Course environment module to access a notebook with the needed compute environement.
 
 ### Creating a Course Environment Modules
 
