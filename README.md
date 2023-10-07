@@ -1,4 +1,4 @@
-# Organising a Cytodata hackathon at CSC
+# Organising a Cytodata 2023 Hackathon at CSC
 
 CSC hosts [Cytodata 2023 hackation](https://www.helsinki.fi/en/conferences/cytodata-2023/hackathon) on Puhti supercomputing environment. Hackathon participant should have a [user account at CSC](https://docs.csc.fi/accounts/how-to-create-new-user-account/) and be a member of a project which [has access to the Puhti service](https://docs.csc.fi/accounts/how-to-add-service-access-for-project/).  One can use either Puhti web interface (www.puhti.csc.fi) or [SSH client](https://csc-training.github.io/csc-env-eff/hands-on/connecting/ssh-puhti.html) for logging into Puhti.
 
@@ -7,20 +7,20 @@ CSC hosts [Cytodata 2023 hackation](https://www.helsinki.fi/en/conferences/cytod
 - [Installing custom Rstudio packages](#installing-custom-rstudio-packages)
 - [Creating a course environment/module(s)](#creating-a-course-environment-modules)
 - [Accessing notebook *via* Puhti web interface](#accessing-notebook-via-puhti-web-interface)
-- [Useful CSC documentation](useful-CSC-documentation)
+- [Useful CSC documentation](#useful-CSC-documentation)
   
-## A brief primer on using Puhti computing environment
+## A brief Primer on Using Puhti Computing Environment
   - *Module system*: CSC uses module system to manage application stack in supercomputing environment. Applications installed as modules can be easily used in both interactive and batch jobs. The detailed instructions on using modularised applications can be found in [CSC documentation pages](https://docs.csc.fi/computing/modules/) as well as on a [CSC course page](https://csc-training.github.io/csc-env-eff/hands-on/modules/modules-puhti.html)
   - *Disk areas*: CSC supercomputers have three main disk areas namely *home*, *projappl* and *scratch* which are visible to all compute and login nodes.  Each disk area has its own specific use and comes with quota limits on the size of disk pace as well as the number of files. Default quotas and their specific use can found in [CSC documentation](https://docs.csc.fi/computing/disk/)
   - *Custom installations*: One can install own software on CSC supercomputers if you cannot find it from the list of [pre-installed applications](https://docs.csc.fi/apps/) or using module spider. Typically, one downloads the source code of the software, compiles the code, and installs to a location where the user has write-access, e.g. the project's /projappl directory. More about installations can be found on [CSC documentation page](https://docs.csc.fi/computing/compiling-puhti/) and a [CSC course pages](https://csc-training.github.io/csc-env-eff/hands-on/installing/installing_hands-on_python.html). Puhti also supports [containerised installations](https://csc-training.github.io/csc-env-eff/hands-on/singularity/singularity-tutorial_part1.html)
   - *Puhti web interface*: One can use web interface for [Puhti](www.puhti.csc.fi) to access the supercomputer via a web browser. More information can be found on web interface on [CSC documentation page](https://docs.csc.fi/computing/webinterface/)
 
-## Preparing custom Jupyter notebook for hackathon
+## Preparing Custom Jupyter Notebook for Hackathon
 
 A custom Jupyter notebook for cytodata hackathon 2023 can be provisioned through [Puhti web interface](https://www.puhti.csc.fi). The customisation of notebook involves the following steps:
 
 
-### Installing necessary python packages to *projappl* directory using *tykky*:
+### Installing Necessary Python Packages to *Projappl* Directory Using *tykky*:
 
 One should not use conda installations directly on Puhti. [Tykky wrapper tool](https://docs.csc.fi/computing/containers/tykky/) which installs application inside of singularity container for better performance including faster startup times, reduced IO load, and  fewer number of files on large parallel filesystems. 
 
@@ -42,7 +42,7 @@ conda-containerize update /projappl/<project>/$USER/CytoHackathon/  --post-insta
 ```
 Tykky would install all needed packages (as listed in the file, yaml) to the directory '/projappl/project_xxxx/CytoHackathon'
 
-### Creating a course environment modules
+### Creating a Course Environment Modules
 
 One has to create a course environments (modules) in the directory /projappl/project_xxxx/www_puhti_modules/ to be able to see a course module in Puhti web insterface ("under Jupyter for courses") . The www_puhti_modules directory can be created if it does not exist. Please note that module_name has to be unique accross the project memmbers. 
 
@@ -60,7 +60,7 @@ mkdir -p /projappl/project_xxxx/www_puhti_modules && cp CytoHackathon-resources.
 
 ```
 
-## Installing Custom Rstudio packages
+## Installing Custom Rstudio Packages
 
 The RStudio application installed on Puhti comes with large set of pre-installed R packages and available *r-env* versions can be found on [CSC doccumentation pages](https://docs.csc.fi/apps/r-env/).  Please refer to CSC documentation on how to use R in batch and interatcive job applications. Installation of custom R packages can be found [here](#https://docs.csc.fi/apps/r-env/#r-package-installations)
 
@@ -90,7 +90,7 @@ Please note that you have to run the following command every time you launch R s
 .libPaths(c("/projappl/<project>/project_rpackages_<rversion>", .libPaths()))
 ```
 
-## Accessing notebook via Puhti web interface
+## Accessing Notebook *via* Puhti Web Interface
 
 1. Login to [Puhti web interface](https://www.puhti.csc.fi/public/login.html)
 2. Login with your CSC account (or Haka/Virtu) (Users should have accepted Puhti service in [myCSC](https://my.csc.fi/welcome) page under a course ( or own) project before using this service). Login page is as shown below:
@@ -102,7 +102,7 @@ Please note that you have to run the following command every time you launch R s
 4. Upon successful launching a job, you can click on "connect to Jupyter" to see the course notebook corresponidng to CytoHackathon.
 
 
-##  Useful CSC documentation
+##  Useful CSC Documentation
 
 - [Jupyter for course](https://docs.csc.fi/computing/webinterface/jupyter-for-courses/)
 - [Tykky containerisation](https://docs.csc.fi/computing/containers/tykky/)
