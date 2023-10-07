@@ -1,22 +1,24 @@
 # Organising a Cytodata hackathon at CSC
 
 CSC hosts [Cytodata 2023 hackation](https://www.helsinki.fi/en/conferences/cytodata-2023/hackathon) on Puhti supercomputing environment. Hackathon participant should have a [user account at CSC](https://docs.csc.fi/accounts/how-to-create-new-user-account/) and be a member of a project which [has access to the Puhti service](https://docs.csc.fi/accounts/how-to-add-service-access-for-project/).  One can use either Puhti web interface (www.puhti.csc.fi) or [SSH client](https://csc-training.github.io/csc-env-eff/hands-on/connecting/ssh-puhti.html) for logging into Puhti.
+
+- [A brief primer on using Puhti computing environment](#a-brief-primer-on-using-puhti-computing-environment)
+- [Preparing custom Jupyter notebook for hackathon](#preparing-custom-jupyter-notebook-for-hackathon)
+- [Installing custom Rstudio packages](#installing-custom-rstudio-packages)
+- [Creating a course environment/module(s)](#creating-a-course-environment-modules)
+- [Accessing notebook *via* Puhti web interface](#accessing-notebook-via-puhti-web-interface)
+- [Useful CSC documentation](useful-CSC-documentation)
   
-# A brief primer on using Puhti computing environment
+## A brief primer on using Puhti computing environment
   - *Module system*: CSC uses module system to manage application stack in supercomputing environment. Applications installed as modules can be easily used in both interactive and batch jobs. The detailed instructions on using modularised applications can be found in [CSC documentation pages](https://docs.csc.fi/computing/modules/) as well as on a [CSC course page](https://csc-training.github.io/csc-env-eff/hands-on/modules/modules-puhti.html)
   - *Disk areas*: CSC supercomputers have three main disk areas namely *home*, *projappl* and *scratch* which are visible to all compute and login nodes.  Each disk area has its own specific use and comes with quota limits on the size of disk pace as well as the number of files. Default quotas and their specific use can found in [CSC documentation](https://docs.csc.fi/computing/disk/)
   - *Custom installations*: One can install own software on CSC supercomputers if you cannot find it from the list of [pre-installed applications](https://docs.csc.fi/apps/) or using module spider. Typically, one downloads the source code of the software, compiles the code, and installs to a location where the user has write-access, e.g. the project's /projappl directory. More about installations can be found on [CSC documentation page](https://docs.csc.fi/computing/compiling-puhti/) and a [CSC course pages](https://csc-training.github.io/csc-env-eff/hands-on/installing/installing_hands-on_python.html). Puhti also supports [containerised installations](https://csc-training.github.io/csc-env-eff/hands-on/singularity/singularity-tutorial_part1.html)
   - *Puhti web interface*: One can use web interface for [Puhti](www.puhti.csc.fi) to access the supercomputer via a web browser. More information can be found on web interface on [CSC documentation page](https://docs.csc.fi/computing/webinterface/)
 
-## Preparing custom notebooks (Jupyter or Rtsudio) for hackathon
+## Preparing custom Jupyter notebook for hackathon
 
 A custom Jupyter notebook for cytodata hackathon 2023 can be provisioned through [Puhti web interface](https://www.puhti.csc.fi). The customisation of notebook involves the following steps:
 
-- [Installing necessary python packages to *projappl* directory using *tykky* wrapper tool](#installing-necessary-python-packages-to-projappl-directory-using-tykky)
-- [Creating a course environment/module(s)](#creating-a-course-environment-modules)
-- [Accessing notebook *via* Puhti web interface](#accessing-notebook-via-puhti-web-interface)
-- [Installing custom Rstudio packages](#installing-custom-rstudio-packages)
-- [Useful CSC documentation](useful-CSC-documentation)
 
 ### Installing necessary python packages to *projappl* directory using *tykky*:
 
@@ -88,7 +90,7 @@ Please note that you have to run the following command every time you launch R s
 .libPaths(c("/projappl/<project>/project_rpackages_<rversion>", .libPaths()))
 ```
 
-### Accessing notebook via Puhti web interface
+## Accessing notebook via Puhti web interface
 
 1. Login to [Puhti web interface](https://www.puhti.csc.fi/public/login.html)
 2. Login with your CSC account (or Haka/Virtu) (Users should have accepted Puhti service in [myCSC](https://my.csc.fi/welcome) page under a course ( or own) project before using this service). Login page is as shown below:
@@ -100,7 +102,7 @@ Please note that you have to run the following command every time you launch R s
 4. Upon successful launching a job, you can click on "connect to Jupyter" to see the course notebook corresponidng to CytoHackathon.
 
 
-###  Useful CSC documentation
+##  Useful CSC documentation
 
 - [Jupyter for course](https://docs.csc.fi/computing/webinterface/jupyter-for-courses/)
 - [Tykky containerisation](https://docs.csc.fi/computing/containers/tykky/)
