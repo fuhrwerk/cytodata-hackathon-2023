@@ -92,7 +92,7 @@ Please note that you have to run the following command every time you launch R s
 ### Accessing notebook via Puhti web interface
 
 1. Login to [Puhti web interface](https://www.puhti.csc.fi/public/login.html)
-2. Login with CSC or course credentials (Users should have accepted Puhti service in [myCSC](https://my.csc.fi/welcome) page under a course ( or own) project before using this service). Login page is as shown below:
+2. Login with your CSC account (or Haka/Virtu) (Users should have accepted Puhti service in [myCSC](https://my.csc.fi/welcome) page under a course ( or own) project before using this service). Login page is as shown below:
 
 <img src="./puhti_web.png" width="80%">
 
