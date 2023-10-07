@@ -1,6 +1,6 @@
 #  Cytodata hackathon 2023 (WIP)
 
-Supercomputing environemnt provided by CSC will be used for this hackathon.  One should have a [user account at CSC](https://docs.csc.fi/accounts/how-to-create-new-user-account/) and be a member of a project which [has access to the Puhti service](https://docs.csc.fi/accounts/how-to-add-service-access-for-project/).  One can use Puhti web interface (www.puhti.csc.fi) or [SSH client for logging into Puhti](https://csc-training.github.io/csc-env-eff/hands-on/connecting/ssh-puhti.html)
+CSC hosts [Cytodata 2023 hackation](https://www.helsinki.fi/en/conferences/cytodata-2023/hackathon) on Puhti supercomputing environement. One should have a [user account at CSC](https://docs.csc.fi/accounts/how-to-create-new-user-account/) and be a member of a project which [has access to the Puhti service](https://docs.csc.fi/accounts/how-to-add-service-access-for-project/).  One can use Puhti web interface (www.puhti.csc.fi) or [SSH client for logging into Puhti](https://csc-training.github.io/csc-env-eff/hands-on/connecting/ssh-puhti.html)
   
 # A brief primer on using Puhti computing environment
   - *Module system*: CSC uses module system to manage application stack in supercomouting environment. Applications installed as modules can be easily accessed for ready use in both interactive and batch jobs. Detailed instructions about using modularised applications can be found in [CSC documentation pages](https://docs.csc.fi/computing/modules/) and also on a [course page](https://csc-training.github.io/csc-env-eff/hands-on/modules/modules-puhti.html)
@@ -8,7 +8,7 @@ Supercomputing environemnt provided by CSC will be used for this hackathon.  One
   - *Custom installations*: It is possible to install own software on CSC supercomputers if you cannot find a software suitable for your needs from the list of [pre-installed applications](https://docs.csc.fi/apps/) or using module spider. Typically, one downloads the source code of the software, compiles the code, and installs to a location where the user has write-access, e.g. the project's /projappl director. More about installation on [CSC documentation page](https://docs.csc.fi/computing/compiling-puhti/) and a [course page](https://csc-training.github.io/csc-env-eff/hands-on/installing/installing_hands-on_python.html). Puhti also supports [containerised installations](https://csc-training.github.io/csc-env-eff/hands-on/singularity/singularity-tutorial_part1.html)
   - *Puhti web interface*: One can use web interface for [Puhti](www.puhti.csc.fi) to access the supercomputer via a web browser. More information can be found on web interfaces on [CSC documentation page](https://docs.csc.fi/computing/webinterface/)
 
-## Preparing custom notebooks (Jupyter or Rtsudio) for cytodata hackathon 2023
+## Preparing custom notebooks (Jupyter or Rtsudio) for hackathon
 
 A custom Jupyter notebook for cytodata hackathon 2023 can be provisioned through [Puhti web interface](https://www.puhti.csc.fi). The customisation of notebook involves the following steps:
 
@@ -42,7 +42,7 @@ Tykky would install all needed packages (as listed in the file, yaml) to the dir
 
 ### Creating a course environment modules
 
-One has to create a course environments (modules) in the directory /projappl/project_xxxx/www_puhti_modules/ to be able to see a course module in Puhti web insterface ("under Jupyter for courses") . The www_puhti_modules directory can be created if it does not exist.
+One has to create a course environments (modules) in the directory /projappl/project_xxxx/www_puhti_modules/ to be able to see a course module in Puhti web insterface ("under Jupyter for courses") . The www_puhti_modules directory can be created if it does not exist. Please note that module_name has to be unique accross the project memmbers. 
 
 The two files needed for setting up the course modules are:
    - a <<module_name>>.lua file that defines the module that sets up the Python environment. Only files containing the text Jupyter will be visible in the app.
