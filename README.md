@@ -20,26 +20,25 @@ A custom Jupyter notebook for cytodata hackathon 2023 can be provisioned through
 
 ### Installing necessary python packages to *projappl* directory using *tykky*:
 
-Tykky wraps installations inside singularity container for improved performance metrics including faster startup times, reduced IO load, and  fewer number of files on large parallel filesystems. Please refer to CSC documentation on [tykky](https://docs.csc.fi/computing/containers/tykky/) for more detailed information.
+One should not use conda installations directly on Puhti. [Tykky wrapper tool](https://docs.csc.fi/computing/containers/tykky/) which installs application inside of singularity container for better performance including faster startup times, reduced IO load, and  fewer number of files on large parallel filesystems. 
 
-For the installation of computational environment required for cytodata hackathon 2023, we use the tykky in the following way (make sure to edit with correct CSC project name as needed):
+Here is an example of tykky-based custom installation for cytodata hackathon 2023 (make sure to edit with correct CSC project name and user name as needed):
 
 ```bash
 # start interactive session once you are in login node
 sinteractive -c 8 -m 50000 -d 100
 # load needed packages
-module load git
-module load purge
+module load git   # git command is not available on interactive nodes
+module load purge 
 module load tykky
-# install python libraries using tykky wrapper tool
+# install python libraries using tykky wrapper tool; make sure to use proper project/username
 mkdir -p /projappl/<project>/$USER && mkdir -p /projappl/<project>/$USER/CytoHackathon
-conda-containerize new --prefix  /projappl/<project>/$USER/CytoHackathon Cytohackathon_py310.yml     # install basic packages
+conda-containerize new --prefix  /projappl/<project>/$USER/CytoHackathon Cytohackathon_py310.yml     # install basic packages using .yml
 export PATH="/projappl/<project>/$USER/CytoHackathon/bin:$PATH"
 conda-containerize update /projappl/<project>/$USER/CytoHackathon/  --post-install requirements_Cytohackathon.sh   # update package list 
 
 ```
 Tykky would install all needed packages (as listed in the file, yaml) to the directory '/projappl/project_xxxx/CytoHackathon'
-
 
 ### Creating a course environment modules
 
