@@ -27,8 +27,8 @@ One should not use conda installations directly on Puhti. [Tykky wrapper tool](h
 Here is an example of tykky-based custom installation for cytodata hackathon 2023 (make sure to edit with correct CSC project name and user name as needed):
 
 ```bash
-# start interactive session once you are in login node
-sinteractive -c 8 -m 30000 -d 100  # this command will give you a compute node with 8 cores, 30 GB memory and 100 GB local disk space
+# start an interactive session once you are in login node
+sinteractive -c 8 -m 30000 -d 100  # this command requests a compute node with 8 cores, 30 GB memory and 100 GB local disk space
 # load needed packages
 module load git   # git command is not available by default on interactive nodes
 module load purge  # clean environment 
