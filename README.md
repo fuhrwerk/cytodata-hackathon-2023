@@ -88,7 +88,7 @@ libpath <- .libPaths()[1]
 install.packages("package", lib = libpath)
 BiocManager::install("mistyR") # this will install "mistyR" package using a R package manager
 install.packages("https://cran.rstudio.com/src/contrib/scattermore_1.2.tar.gz", repos=NULL, type="source") # install a pckage from source
-remotes::install_github("satijalab/seurat", "seurat5", quiet = TRUE)  # install package from a Github
+remotes::install_github("satijalab/seurat", "seurat5", quiet = FALSE)  # install package from a Github
 ```
 Please note that you have to run the following command every time you launch R session if you want to use your custom installations.
 
