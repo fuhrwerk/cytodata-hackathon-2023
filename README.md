@@ -1,9 +1,9 @@
 # Organising a Cytodata 2023 Hackathon at CSC
 
-CSC hosts [Cytodata 2023 hackation](https://www.helsinki.fi/en/conferences/cytodata-2023/hackathon) on Puhti supercomputing environment. Hackathon participant should have a [user account at CSC](https://docs.csc.fi/accounts/how-to-create-new-user-account/) and be a member of a project which [has access to the Puhti service](https://docs.csc.fi/accounts/how-to-add-service-access-for-project/).  One can use either [Puhti web interface](www.puhti.csc.fi) or [SSH client](https://csc-training.github.io/csc-env-eff/hands-on/connecting/ssh-puhti.html) for logging into Puhti.
+CSC hosts [Cytodata 2023 hackation](https://www.helsinki.fi/en/conferences/cytodata-2023/hackathon) on Puhti supercomputing environment. Hackathon participant should have a [user account at CSC](https://docs.csc.fi/accounts/how-to-create-new-user-account/) and be a member of a project that [has access to the Puhti service](https://docs.csc.fi/accounts/how-to-add-service-access-for-project/).  One can use either [Puhti web interface](www.puhti.csc.fi) or [SSH client](https://csc-training.github.io/csc-env-eff/hands-on/connecting/ssh-puhti.html) for logging into Puhti.
 
 - [A brief primer on using Puhti computing environment](#a-brief-primer-on-using-puhti-computing-environment)
-- [Preparing custom Jupyter notebook for hackathon](#preparing-custom-jupyter-notebook-for-hackathon)
+- [Preparing custom Jupyter notebook for hackathon](#preparing-a-custom-jupyter-notebook-for-hackathon)
 - [Installing custom Rstudio packages](#installing-custom-rstudio-packages)
 - [Creating a course environment/module(s)](#creating-a-course-environment-modules)
 - [Accessing notebook *via* Puhti web interface](#accessing-notebook-via-puhti-web-interface)
@@ -15,7 +15,7 @@ CSC hosts [Cytodata 2023 hackation](https://www.helsinki.fi/en/conferences/cytod
   - *Custom installations*: One can install own software on CSC supercomputers if you cannot find it from the list of [pre-installed applications](https://docs.csc.fi/apps/) or using module spider. Typically, one downloads the source code of the software, compiles the code, and installs to a location where the user has write-access, e.g. the project's /projappl directory. More about installations can be found on [CSC documentation page](https://docs.csc.fi/computing/compiling-puhti/) and a [CSC course pages](https://csc-training.github.io/csc-env-eff/hands-on/installing/installing_hands-on_python.html). Puhti also supports [containerised installations](https://csc-training.github.io/csc-env-eff/hands-on/singularity/singularity-tutorial_part1.html)
   - *Puhti web interface*: One can use web interface for [Puhti](www.puhti.csc.fi) to access the supercomputer via a web browser. More information can be found on web interface on [CSC documentation page](https://docs.csc.fi/computing/webinterface/)
 
-## Preparing Custom Jupyter Notebook for Hackathon
+## Preparing a Custom Jupyter Notebook for Hackathon
 
 A custom Jupyter notebook for cytodata hackathon 2023 can be provisioned through [Puhti web interface](https://www.puhti.csc.fi). The customisation of notebook involves the following steps:
 
@@ -30,9 +30,9 @@ Here is an example of tykky-based custom installation for cytodata hackathon 202
 # start interactive session once you are in login node
 sinteractive -c 8 -m 50000 -d 100
 # load needed packages
-module load git   # git command is not available on interactive nodes
-module load purge 
-module load tykky
+module load git   # git command is not available by default on interactive nodes
+module load purge  # clean environment 
+module load tykky # load tykky wrapper 
 # install python libraries using tykky wrapper tool; make sure to use proper project/username
 mkdir -p /projappl/<project>/$USER && mkdir -p /projappl/<project>/$USER/CytoHackathon
 conda-containerize new --prefix  /projappl/<project>/$USER/CytoHackathon Cytohackathon_py310.yml     # install basic packages using .yml
