@@ -1,4 +1,4 @@
-#  Cytodata hackathon 2023 (WIP)
+# Organising a Cytodata hackathon at CSC
 
 CSC hosts [Cytodata 2023 hackation](https://www.helsinki.fi/en/conferences/cytodata-2023/hackathon) on Puhti supercomputing environement. One should have a [user account at CSC](https://docs.csc.fi/accounts/how-to-create-new-user-account/) and be a member of a project which [has access to the Puhti service](https://docs.csc.fi/accounts/how-to-add-service-access-for-project/).  One can use Puhti web interface (www.puhti.csc.fi) or [SSH client for logging into Puhti](https://csc-training.github.io/csc-env-eff/hands-on/connecting/ssh-puhti.html)
   
