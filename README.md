@@ -48,7 +48,7 @@ The two files needed for setting up the course modules are:
    - a <<module_name>>.lua file that defines the module that sets up the Python environment. Only files containing the text Jupyter will be visible in the app.
    - a <<module_name>>-resources.yml that defines the default resources used for Jupyter.
   
-For this CytoHackathon event, the above mentioned two files (i.e., .lua and .yaml files) are created  in the git repository we cloned above. so just copy them over to appropriate place in projappl folder and edit the correct project for this course as below:
+For this CytoHackathon event, the above mentioned two files (i.e., .lua and .yaml files) are created  in the GitHub repository we cloned above. So just copy them over to appropriate place under /projappl folder as below:
 
 ```bash
 
