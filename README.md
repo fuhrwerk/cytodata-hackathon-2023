@@ -2,7 +2,7 @@
 
   Compute environemnt provided at CSC supercomputer will be used for this hackathon.  
   
-# Brief description on using computing environment on Puhti
+# A brief description on using Puhti computing environment
   - *Module system*: CSC uses module system to manage application stack in supercomouting environment. Applications installed as modules can be easily accessed for ready use in both interactive and batch jobs. Detailed instructions about using modularised applications can be found in [CSC documentation pages](https://docs.csc.fi/computing/modules/)
   - *Disk areas*: CSC supercomputers have three main disk areas namely home, projappl and scratch and visible to all compute and login nodes.  Each disk area has itw own use and come with specific quota on the size as well as number of files one can keep. Default quotas and their specific uase can found in [CSC documentation](https://docs.csc.fi/computing/disk/)
   - *Custom installations*: It is possible to install own software on CSC supercomputers if you cannot find a software suitable for your needs from the list of [pre-installed applications](https://docs.csc.fi/apps/) or using module spider. Typically, one downloads the source code of the software, compiles the code, and installs to a location where the user has write-access, e.g. the project's /projappl director. More about installation on [CSC docs page](https://docs.csc.fi/computing/compiling-puhti/)
