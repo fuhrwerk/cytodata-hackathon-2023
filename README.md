@@ -4,7 +4,7 @@ CSC hosts [Cytodata 2023 hackation](https://www.helsinki.fi/en/conferences/cytod
 
 - [A brief primer on using Puhti computing environment](#a-brief-primer-on-using-puhti-computing-environment)
 - [Preparing custom Jupyter notebook for hackathon](#preparing-a-custom-jupyter-notebook-for-hackathon)
-- [Installing custom Rstudio packages](#installing-custom-rstudio-packages)
+- [Installing missing Rstudio packages](#installing-missing-rstudio-packages)
 - [Creating a course environment/module(s)](#creating-a-course-environment-modules)
 - [Accessing notebook *via* Puhti web interface](#accessing-notebook-via-puhti-web-interface)
 - [Useful CSC documentation](#useful-CSC-documentation)
@@ -62,12 +62,12 @@ mkdir -p /projappl/project_xxxx/www_puhti_modules && cp CytoHackathon-resources.
 
 ```
 
-## Installing Custom Rstudio Packages
+## Installing Missing Rstudio Packages
 
-The RStudio application installed on Puhti comes with large set of pre-installed R packages and available *r-env* versions can be found on [CSC doccumentation pages](https://docs.csc.fi/apps/r-env/).  Please refer to CSC documentation on how to use R in batch and interatcive job applications. Installation of custom R packages can be found [here](#https://docs.csc.fi/apps/r-env/#r-package-installations)
+The RStudio application installed on Puhti comes with large set of pre-installed R packages. You can check available *r-env* versions on our [CSC doccumentation pages](https://docs.csc.fi/apps/r-env/). Please refer to CSC documentation on how to use R in batch and interatcive job applications in Puhti. Installation instructions for misssing R packages can be found [here](#https://docs.csc.fi/apps/r-env/#r-package-installations).
 
-Briefly: R/Rstuido is installed as containers and users can only install the missing R packages in a dedicated writable disk spaces (
-e.g., /projappl). When installing R packages, point R to the writable disk space. 
+Briefly, R/Rstuido is installed as containers and users can only install missing R packages in a dedicated writable disk areas (
+e.g., /projappl). When installing R packages, one has to point R to writable disk area. 
 
 Here is an example on how to  install a R package:
 ```
