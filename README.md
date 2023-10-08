@@ -104,7 +104,7 @@ Please note that you have to run the following command every time you launch R s
 
 <img src="./puhti_web.png" width="80%">
 
-3. Once login is successfull, you can click "Interactive Sessions" on the top menu bar and then click "Jupyter for courses" (or directly from pinned apps on landing page). Once the app is launched, you can see the different fields to fill in before launching a job. For this course, select the "course Project" and Working directory corresponding  to course project. Then you will be able to see "CytoHackathon" module under the "Course module" field. You can then launch Jupyter notebook whick will be launched in the interaction partition by default. You can also change the default settings by checking "Show custom resource settings". Similarly, you can also launch Rstudio (just by clicking "Rstudio" app) from Puhti web interface.
+3. Once login is successfull, you can click "Interactive Sessions" on the top menu bar and then click "Jupyter for courses" (or directly from pinned apps on landing page). Once the app is launched, you can see the different fields to fill in before launching a job. For this course, select the "course Project" and Working directory corresponding  to course project. Then you will be able to see "CytoHackathon" module under the "Course module" field. You can then launch Jupyter notebook whick will be launched in the interaction partition by default. You can also change the default settings by checking "Show custom resource settings". Similarly, you can also launch Rstudio (just by clicking "Rstudio" app) on the landing page of Puhti web interface.
 
 4. Upon successful launching a job, you can click on "connect to Jupyter" to see the course notebook corresponidng to CytoHackathon.
 
