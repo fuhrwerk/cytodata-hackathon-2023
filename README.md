@@ -66,6 +66,7 @@ mkdir -p /projappl/project_xxxx/www_puhti_modules && cp CytoHackathon-resources.
 
 ```
 
+Once you have set up modules as instructed above, a module named, CytoHackathon is visible in "Jupyter for courses" app in the Puhti web interface
 ## Installing Missing Rstudio Packages
 
 The RStudio application installed on Puhti comes with large set of pre-installed R packages. You can check available *r-env* versions on our [CSC doccumentation pages](https://docs.csc.fi/apps/r-env/). Please refer to CSC documentation on how to use R in batch and interatcive job applications in Puhti. Installation instructions for misssing R packages can be found [here](#https://docs.csc.fi/apps/r-env/#r-package-installations).
