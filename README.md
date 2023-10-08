@@ -5,7 +5,7 @@ CSC hosts [Cytodata 2023 hackation](https://www.helsinki.fi/en/conferences/cytod
 - [A brief primer on using Puhti computing environment](#a-brief-primer-on-using-puhti-computing-environment)
 - [Preparing custom Jupyter notebook for hackathon](#preparing-a-custom-jupyter-notebook-for-hackathon)
 - [Installing missing Rstudio packages](#installing-missing-rstudio-packages)
-- [Creating a course environment/module(s)](#creating-a-course-environment-modules)
+- [Creating a course environment/module(s) on Puhti Web Interface](#creating-a-course-environment-modules-on-puhti-web-interface)
 - [Accessing notebook *via* Puhti web interface](#accessing-notebook-via-puhti-web-interface)
 - [Useful CSC documentation](#useful-CSC-documentation)
   
@@ -48,7 +48,7 @@ The tool also supports using Mamba for installing packages. Mamba often finds su
 conda-containerize new --mamba --prefix <install_dir> env.yml
 ```
 
-### Creating a Course Environment Modules
+### Creating a Course Environment Modules on Puhti Web Interface
 
 One has to create a course environments (modules) in the directory /projappl/project_xxxx/www_puhti_modules/ to be able to see a course module in Puhti web insterface ("under Jupyter for courses") . The www_puhti_modules directory can be created if it does not exist. Please note that module_name has to be unique accross the project members. 
 
