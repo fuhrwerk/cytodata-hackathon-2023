@@ -42,7 +42,7 @@ conda-containerize update /projappl/<project>/$USER/CytoHackathon/  --post-insta
 ```
 In the above example, Tykky installs a basic setup (as listed in the file, yaml) first and then updates all python packages (as listed in the file, requirements_Cytohackathon.sh) to the directory '/projappl/project_xxxx/CytoHackathon'. Please note that you have to add the bin directory of installation to the $PATH variable before start using the installed environment (i.e., export PATH="/projappl/<project>/$USER/CytoHackathon/bin:$PATH").
 
-The tool also supports using Mamba for installing packages. Mamba often finds suitable packages much faster than Conda, so it is a good option when the required package list is long. Enable this feature by adding the --mamba flag  as below:
+The tool also supports *Mamba* for installing python packages. Mamba often finds suitable packages much faster than Conda, so it is a good option when the required package list is long. Enable this feature by adding the --mamba flag  as below:
 
 ```
 conda-containerize new --mamba --prefix <install_dir> env.yml
