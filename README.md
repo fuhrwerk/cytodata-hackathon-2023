@@ -85,7 +85,7 @@ libpath <- .libPaths()[1]
 # This command can be used to check that the folder is now visible:
 .libPaths() # It should be first on the list
 
-# Package installations should now be directed to the project
+# Package installations should now be directed to the writable area of your project ( use actual project and user name in libpath variable)
 install.packages("package", lib = libpath)
 BiocManager::install("mistyR") # this will install "mistyR" package using a R package manager
 install.packages("https://cran.rstudio.com/src/contrib/scattermore_1.2.tar.gz", repos=NULL, type="source") # install a pckage from source
