@@ -62,7 +62,7 @@ For this CytoHackathon event, the above mentioned two files (i.e., .lua and .yam
 
 mkdir -p /projappl/project_xxxx/www_puhti_modules && cp CytoHackathon-resources.yml	CytoHackathon.lua /projappl/project_xxxx/www_puhti_modules
 
-# Edit the correct project number (in two places in CytoHackathon-course.lua file) in the the copied files in /projappl/project_xxxx/www_puhti_modules.
+# Edit the correct project number and actual username (in CytoHackathon-course.lua file) in the copied files in /projappl/project_xxxx/www_puhti_modules.
 
 ```
 
